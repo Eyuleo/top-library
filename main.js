@@ -1,3 +1,4 @@
+import './style.css'
 let library = []
 
 function Book(title, author, pages) {

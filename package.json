@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"tailbuild": "tailwindcss -i ./src/index.css -o ./src/style.css",
+		"tailbuild": "tailwindcss -i ./style.css -o ./index.css",
 		"watch": "tailwindcss -i ./src/index.css -o ./src/style.css --watch"
 	},
 	"devDependencies": {

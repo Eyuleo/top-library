@@ -1,0 +1,17 @@
+{
+	"name": "odin-library",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"tailbuild": "tailwindcss -i ./src/index.css -o ./src/style.css",
+		"watch": "tailwindcss -i ./src/index.css -o ./src/style.css --watch"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.4.1",
+		"vite": "^5.1.4"
+	}
+}

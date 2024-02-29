@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/public/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/public/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/public/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>YouLibrary</title>
+	</head>
+	<body class="bg-slate-200 font-karla">
+		<header class="py-4 shadow bg-white">
+			<div class="mx-4 md:container md:mx-auto">
+				<nav class="flex flex-col justify-between sm:flex-row">
+					<h1 class="text-2xl font-bold">
+						YouLibrary<i class="fa-solid fa-book-open"></i>
+					</h1>
+					<button
+						id="open-modal"
+						class="text-xl bg-black text-white py-1 px-4 mt-3 md:mt-0 rounded-md hover:-translate-y-1 transition-all"
+					>
+						Add Book <i class="fa-solid fa-plus"></i>
+					</button>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<form id="book-form">
+				<div class="mx-4 md:container md:mx-auto">
+					<dialog class="p-5 rounded ring-2 ring-slate-300">
+						<label for="title" class="text-xl">Title</label>
+						<input
+							type="text"
+							name="title"
+							id="title"
+							required
+							class="border-2 border-gray-300 w-full p-1 my-1 rounded-md focus:outline-1 focus:outline-gray-400"
+						/>
+						<label for="author" class="text-xl">Author</label>
+						<input
+							type="text"
+							name="author"
+							id="author"
+							required
+							class="border-2 border-gray-300 w-full p-1 my-1 rounded-md"
+						/>
+						<label for="pages" class="text-xl">Page</label>
+						<input
+							type="number"
+							name="pages"
+							id="pages"
+							min="1"
+							required
+							class="border-2 border-gray-300 w-full p-1 my-1 rounded-md"
+						/>
+						<div class="flex gap-5 justify-center">
+							<button
+								type="submit"
+								class="w-2/5 text-xl bg-black text-white py-1 px-4 mt-3 md:mt-0 rounded-md hover:-translate-y-1 transition-all"
+							>
+								Add
+							</button>
+							<button
+								id="close-modal"
+								class="w-2/5 text-xl bg-black text-white py-1 px-4 mt-3 md:mt-0 rounded-md hover:-translate-y-1 transition-all"
+							>
+								Cancel
+							</button>
+						</div>
+					</dialog>
+				</div>
+			</form>
+			<section>
+				<div
+					class="my-2 flex flex-col items-center md:justify-normal md:flex-row sm:flex-wrap md:gap-5 md:container md:mx-auto"
+					id="books"
+				></div>
+			</section>
+		</main>
+		<footer
+			class="absolute bottom-0 left-0 flex justify-center gap-1 w-full text-xl font-bold"
+		>
+			<p>
+				Copyright &copy;
+				<script>
+					document.write(new Date().getFullYear())
+				</script>
+				Eyuel
+			</p>
+			<a
+				class="hover:-translate-y-2 transition-all"
+				href="https://github.com/Eyuleo"
+				target="_blank"
+				><i class="fa-brands fa-github"></i
+			></a>
+		</footer>
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>
